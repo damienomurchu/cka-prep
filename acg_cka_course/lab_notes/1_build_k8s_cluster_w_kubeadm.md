@@ -1,5 +1,13 @@
 # Creating k8s cluster w/ kubeadm
 
+## Details
+
+![image](https://user-images.githubusercontent.com/12085451/221173478-1fb37ee2-9a06-4cec-93a5-e99c023d3c65.png)
+
+![image](https://user-images.githubusercontent.com/12085451/221173556-cedd9299-46c5-40b3-ac34-4600d40bd388.png)
+
+> ubuntu instances used for lab nodes
+
 ## Control plane 
 
 ```sh
