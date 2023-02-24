@@ -18,6 +18,7 @@ kubectl drain <node> [--force] [--ignore-daemonsets]
 kubectl uncordon <node>
 ```
 
+
 ## Upgrading k8s w/ kubeadm
 
 Control plane upgrade steps:
@@ -34,3 +35,28 @@ Worker node upgrade steps:
 3. upgrade kubelet configuration (kubeadm upgrade node)
 4. upgrade kubelet and kubectl & reload kubelet
 5. uncordon node
+
+
+## kubectl
+```
+# list all k8s resource types available in cluster (useful for short names)
+kubectl api-resources
+
+# list object(s) or return definition of object in cluster
+kubectl get <object-type> <object-name> -o <output> --sort-by <JSONPath> --selector <selector>
+
+# get detailed info about a k8s object (consolidates data from multiple api calls)
+kubectl describe <object-type> <object-name> 
+
+# create k8s resource (will fail if resource already exists)
+kubectl create -f <resource-config>
+
+# update a k8s resource (will create if it doesn't exist)
+kubectl apply -f <resource-config>
+
+# delete k8s resource in cluster
+kubectl delete <object-type> <object-name> 
+
+# run command/ connect to container - container must have command installed
+kubectl exec <pod> -c <container> -- <command> 
+```
