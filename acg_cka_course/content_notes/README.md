@@ -25,12 +25,12 @@ Control plane upgrade steps:
 2. drain control plane node
 3. plan upgrade (kubeadm upgrade plan <k8s-ve)
 4. apply upgrade (kubeadm upgrade apply)
-5. upgrade kubelet and kubectl on control plane node
+5. upgrade kubelet and kubectl on control plane node & reload kubelet
 6. uncordon control plane node
 
 Worker node upgrade steps:
 1. drain node
 2. upgrade kubeadm
 3. upgrade kubelet configuration (kubeadm upgrade node)
-4. upgrade kubelet and kubectl
+4. upgrade kubelet and kubectl & reload kubelet
 5. uncordon node
